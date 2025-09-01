@@ -9,7 +9,7 @@
 | **Legajo** | **Nombre**                                      | **Mail**                       |**Nombre de Usuario Github**| 
 |------------|-------------------------------------------------|--------------------------------|----------------------------|
 | 68719      | Albarracín, Gonzalo Nahuel                      | galbarracin16@gmail.com        | gonzaloAlbarracin          |
-| 99395      | Baudo, Candela                                  | candelabaudo14@gmail.com       |                            |
+| 99395      | Baudo, Candela                                  | candelabaudo14@gmail.com       | candebaudo22                       |
 | 95069      | Hillar, Agustin Nicolás                         | agushillar8@gmail.com          | agus0808                   |
 | 85216      | Koncurat, Joaquin Ernesto                       | joaquinkoncurat@gmail.com      | joaquinkoncurat            |
 | 96080      | López Román, Rosario                            | rosalora4@gmail.com            | ro-lopezr                  |
@@ -46,4 +46,6 @@
 | Ejercicios     | Practico   | EJ_<<_NombreDelCaso>_>_<<_Tema_>>_<<_ext_>>              | //ICS_4K2_2025_GRUPO7/MATERIALES/PARCIAL<<_N_>>/EJERCICIOS                |
 | Presentaciones | Material   | <<_NN_>>_<<_NombreDelTemaAsociadoALaPresentación_>>.PDF  | //ICS_4K2_2025_GRUPO7/MATERIALES/PRESENTACIONES                           |
 
+### Línea Base
+Definimos como línea base de nuestro repositorio el momento en que recibamos la devolución por parte de los docentes en cada trabajo práctico evaluable y de investigación.
 
