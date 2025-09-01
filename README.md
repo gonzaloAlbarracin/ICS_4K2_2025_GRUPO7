@@ -38,5 +38,10 @@
     - TRABAJOS PRÁCTICOS/
       - TPN_<<_Nombre del TP_>>
 
+### Items de Configuracion
+
+| **Titulo**    | **Tipo**   | **Regla de Nombre**           | **Ubicacion**                                                            |
+|---------------|------------|-------------------------------|--------------------------------------------------------------------------|
+| Bibliografia  | Material   | <<NombreDelLibro>>.pdf        | //ICS_4K2_2025_GRUPO7/MATERIALES/BIBLIOGRAFIA/BIBLIOGRAFIA_DE_<<_TEMA_>> |
 
 
