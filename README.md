@@ -23,6 +23,11 @@
 - **ICS_4K2_2025_GRUPO7/**
   - **MATERIALES/**
     - BIBLIOGRAFÍA
+      - INGENIERIA DE SOFTWARE
+      - TESTING DE SOFTWARE
+      - PENSAMIENTO AGIL
+      - SCM
+      - LEAN Y KANBAN
     - PARCIAL <<_N_>>/
       - EJERCICIOS
       - TOMA DE NOTAS
