@@ -40,10 +40,10 @@
 
 ### Items de Configuracion
 
-| **Titulo**     | **Tipo**   | **Regla de Nombre**                                    | **Ubicacion**                                                             |
-|----------------|------------|--------------------------------------------------------|---------------------------------------------------------------------------|
-| Bibliografia   | Material   | <<_NombreDelLibro_>>.PDF                               | //ICS_4K2_2025_GRUPO7/MATERIALES/BIBLIOGRAFIA/BIBLIOGRAFIA_DE_<<_TEMA_>>  |
-| Ejercicios     | Practico   | EJ_<<_NombreDelCaso>_>_<<_Tema_>>_<<_ext_>>            | //ICS_4K2_2025_GRUPO7/MATERIALES/PARCIAL<<_N_>>/EJERCICIOS                |
-| Presentaciones | Material   | <<NN>>_<<_NombreDelTemaAsociadoALaPresentación_>>.PDF  | //ICS_4K2_2025_GRUPO7/MATERIALES/PRESENTACIONES                           |
+| **Titulo**     | **Tipo**   | **Regla de Nombre**                                      | **Ubicacion**                                                             |
+|----------------|------------|----------------------------------------------------------|---------------------------------------------------------------------------|
+| Bibliografia   | Material   | <<_NombreDelLibro_>>.PDF                                 | //ICS_4K2_2025_GRUPO7/MATERIALES/BIBLIOGRAFIA/BIBLIOGRAFIA_DE_<<_TEMA_>>  |
+| Ejercicios     | Practico   | EJ_<<_NombreDelCaso>_>_<<_Tema_>>_<<_ext_>>              | //ICS_4K2_2025_GRUPO7/MATERIALES/PARCIAL<<_N_>>/EJERCICIOS                |
+| Presentaciones | Material   | <<_NN_>>_<<_NombreDelTemaAsociadoALaPresentación_>>.PDF  | //ICS_4K2_2025_GRUPO7/MATERIALES/PRESENTACIONES                           |
 
 
