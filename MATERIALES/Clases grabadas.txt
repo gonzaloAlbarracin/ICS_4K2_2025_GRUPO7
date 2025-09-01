@@ -1,18 +1,18 @@
-Clase de Martes 28 de Julio
+**Clase de Martes 28 de Julio**
 
- 4K2_20200728_IntroIngSw_Parte1 – https://youtu.be/kdY7VI9MJNA
+4K2_20200728_IntroIngSw_Parte1 – https://youtu.be/kdY7VI9MJNA
 
 4K2_20200728_IntroIngSw_Parte2 – https://youtu.be/zi-YC_ESaIE
 
-Clase del Viernes 31 de Julio
+**Clase del Viernes 31 de Julio**
 
- 4K2_20200731_CompProyectoSw_Parte1 – https://youtu.be/bmojNyA2og0
+4K2_20200731_CompProyectoSw_Parte1 – https://youtu.be/bmojNyA2og0
 
 4K2_20200731_CompProyectoSw_Parte2 - https://youtu.be/CJJblrhvNzg
 
 4K2_20200731_CompProyectoSw_Parte3 - https://youtu.be/Q6Ktnal2suo
 
-Clase de Martes 4 de Agosto
+**Clase de Martes 4 de Agosto**
 
 https://youtu.be/6gFghdQOCzk
 
@@ -20,132 +20,133 @@ https://youtu.be/5J9S9-vVh8g
 
 https://youtu.be/DJp-ijgo0tk
 
-Clase del Viernes 7 de Agosto
+**Clase del Viernes 7 de Agosto**
 
- 4K2_20200807_ReqsAgiles_UserStories_Parte1 - https://youtu.be/mxWGCwXXoVY
+4K2_20200807_ReqsAgiles_UserStories_Parte1 - https://youtu.be/mxWGCwXXoVY
 
 4K2_20200807_ReqsAgiles_UserStories_Parte2 - https://youtu.be/Z27_IcTeNw4  
 
 4K2_20200807_ReqsAgiles_UserStories_Parte3 - https://youtu.be/WwN-LVOHtpU
 
-Clase de Martes 11 de Agosto
+**Clase de Martes 11 de Agosto**
 
 https://youtu.be/wmTvH1nsW8w
 
 https://youtu.be/JNcwKd7zb_M
 
-Clase del Viernes 14 de Agosto
+**Clase del Viernes 14 de Agosto**
 
 4K2_20200814_UserStories_GestionProd_Parte1 - https://youtu.be/M4HYXQWdlys
 
 4K2_20200814_UserStories_GestionProd_Parte2 - https://youtu.be/d9VRj0aIMWs
 
-Clase del Martes 18 de Agosto
+**Clase del Martes 18 de Agosto**
 
 https://youtu.be/Qw79xAGN33k
 
 https://youtu.be/N7MxxRg37VE: 4K2 20200818 User Stories – Estimation - MVP Parte2
 
-Clase del Viernes 21 de Agosto
+**Clase del Viernes 21 de Agosto**
 
- 4K2_20200820_SCM_Parte1 - https://youtu.be/-bWX2pxAc5k
+4K2_20200820_SCM_Parte1 - https://youtu.be/-bWX2pxAc5k
 
 4K2_20200820_SCM_Parte2 – https://youtu.be/LH29SJpMtBo
 
 4K2_20200820_SCM_Parte3 - https://youtu.be/0ca6grti6zs
 
-Clase del Martes 25 de Agosto
+**Clase del Martes 25 de Agosto**
 
- 4K2_20200825_SCM_Parte1 - https://youtu.be/GE0inOTsEjk
+4K2_20200825_SCM_Parte1 - https://youtu.be/GE0inOTsEjk
 
- 4K2_20200825_SCM_Parte2 - https://youtu.be/0lgYNRGisMQ
+4K2_20200825_SCM_Parte2 - https://youtu.be/0lgYNRGisMQ
 
- 4K2_20200825_SCM_Parte3 - https://youtu.be/t00quiOvjLA 
+4K2_20200825_SCM_Parte3 - https://youtu.be/t00quiOvjLA 
 
-Clase del Viernes 28 de Agosto
+**Clase del Viernes 28 de Agosto**
 
- 4K2_20200828_Scrum_Parte1 – https://youtu.be/NHuMbsFU0ms
+4K2_20200828_Scrum_Parte1 – https://youtu.be/NHuMbsFU0ms
 
 4K2_20200828_Scrum_Parte2 – https://youtu.be/mW0qg6dTbKY
 
 4K2_20200828_Scrum_Parte3 – https://youtu.be/xl52govplPQ
 
-Clase del Viernes 04 de Septiembre – Framework para escalar Scrum
+**Clase del Viernes 04 de Septiembre – Framework para escalar Scrum**
 
- 4K2_20200904_FrameEscalarScrum_Parte1 – https://youtu.be/lK9a-GOLW1g
+4K2_20200904_FrameEscalarScrum_Parte1 – https://youtu.be/lK9a-GOLW1g
 
 4K2_20200904_FrameEscalarScrum_Parte2 – https://youtu.be/DnQ_barzO48
 
-Clase del Martes 08 de Septiembre – Release Plan y Sprint Planning
+**Clase del Martes 08 de Septiembre – Release Plan y Sprint Planning**
 
- 4K2_20200908_SprintPlanning – https://youtu.be/GqAel7bGql0
+4K2_20200908_SprintPlanning – https://youtu.be/GqAel7bGql0
 
-Clase del Martes 15 de Septiembre – Testing de Software Caja Negra
+**Clase del Martes 15 de Septiembre – Testing de Software Caja Negra**
 
 https://youtu.be/s0SD3s7Yu6Y
 
 https://youtu.be/aeWUHfXcusI
 
-Clase del Viernes 18 de Septiembre – Testing de Software
+**Clase del Viernes 18 de Septiembre – Testing de Software**
 
- 4K2_20200918_TestingSoftware_Parte1 - https://youtu.be/AuHUKtut7eo
+4K2_20200918_TestingSoftware_Parte1 - https://youtu.be/AuHUKtut7eo
 
 4K2_20200918_TestingSoftware_Parte2 -  https://youtu.be/4SFstHKhEqM
 
 4K2_20200918_TestingSoftware_Parte3 - https://youtu.be/9H_jm2y233w
 
-Clase del Martes 22 de Septiembre – Testing de Software Caja Negra
+**Clase del Martes 22 de Septiembre – Testing de Software Caja Negra**
 
 https://youtu.be/FBW0-bNjLgY
 
 https://youtu.be/XwQAUzFGRkI
 
-Clase del Viernes 25 de Septiembre – Testing de Software – Enfoque testing ágil
+**Clase del Viernes 25 de Septiembre – Testing de Software – Enfoque testing ágil**
 
- 4K2_20200925_TestingSoftware_Parte1 - https://youtu.be/SXquwfq5_bA
+4K2_20200925_TestingSoftware_Parte1 - https://youtu.be/SXquwfq5_bA
 
 4K2_20200925_TestingSoftware_Parte2 - https://youtu.be/F_2aavz06tk
 
 4K2_20200925_TestingSoftware_Parte3 - https://youtu.be/MAlup1IW_PU
 
-Clase del Viernes 02 de Octubre – Aseguramiento de Calidad de Proceso y de Producto
+**Clase del Viernes 02 de Octubre – Aseguramiento de Calidad de Proceso y de Producto**
 
 4K2_20201002_PPQA - https://youtu.be/2elElmTHY7I
 
-Clase del Martes 6 de Octubre – Testing de Caja Negra
+**Clase del Martes 6 de Octubre – Testing de Caja Negra**
 
 4K2_20201006?_TestingCajaNegra - https://youtu.be/HFD01sY1Ago
 
-Clase del Viernes 09 de Octubre – Lean & Kanban
+**Clase del Viernes 09 de Octubre – Lean & Kanban**
 
 4K2_20201009_Lean&Kanban - https://youtu.be/z2A990iemdg
 
-Clase del Viernes 13 de Octubre – Testing de Caja Blanca
+**Clase del Viernes 13 de Octubre – Testing de Caja Blanca**
 
 4K2_20201013_TestingCajaBlanca  - https://youtu.be/CoITYsUt64o
 
-Links a Videos de la Clase del 21 de Octubre – Practico 13 Design Thinking
+**Clase del 21 de Octubre – Practico 13 Design Thinking**
 
-Se sube la clase del curso 4K3 por problemas con la grabación del 4K2.
+Se sube la clase del curso 4K3 por problemas con la grabación del 4K2:
 
 4K3_20201021_DesignThinking: https://youtu.be/ZLYnX0E4Uf4
 
-Clase del Viernes 23 de Octubre – Métricas en los diferentes enfoques de gestión
+**Clase del Viernes 23 de Octubre – Métricas en los diferentes enfoques de gestión**
 
 4K2_20201023_Metricas - https://youtu.be/bx7skzrW-E8
 
-Clase del Martes 27 de Octubre – Revisiones Técnicas
+**Clase del Martes 27 de Octubre – Revisiones Técnicas**
 
- 4K2_20201027_RevisionesTecnicas - https://youtu.be/29p0TrrtleQ
+4K2_20201027_RevisionesTecnicas - https://youtu.be/29p0TrrtleQ
 
-Clase del Martes 3 de Noviembre - Retrospectivas
+**Clase del Martes 3 de Noviembre - Retrospectivas**
 
 https://youtu.be/fcp5TFtPLoM
 
-Clase del Viernes 06 de Noviembre – Modelos de Mejora y de Calidad
+**Clase del Viernes 06 de Noviembre – Modelos de Mejora y de Calidad**
 
 4K2_20201106_IDEAL_CMMI - https://youtu.be/WS4aVpH0TJc
 
-Clase del Jueves 05 de Noviembre – Modelos de Mejora y de Calidad – Auditorías
+**Clase del Jueves 05 de Noviembre – Modelos de Mejora y de Calidad – Auditorías**
 
 4K1_20201105_IDEAL_CMMI_Auditorias - https://youtu.be/SUOfdl3Xew0
+
