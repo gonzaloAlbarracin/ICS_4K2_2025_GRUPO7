@@ -12,7 +12,7 @@
 | 99395      | Baudo, Candela                                  | candelabaudo14@gmail.com       |                            |
 | 95069      | Hillar, Agustin Nicolás                         | agushillar8@gmail.com          | agus0808                   |
 | 85216      | Koncurat, Joaquin Ernesto                       | joaquinkoncurat@gmail.com      |                            |
-| 96080      | López Román, Rosario                            | rosalora4@gmail.com            |                            |
+| 96080      | López Román, Rosario                            | rosalora4@gmail.com            | ro-lopezr                  |
 | 94658      | Molina Castillo, Lautaro                        | lautaro.molina7330@gmail.com   |                            |
 | 95035      | Obregón Cáceres, Maximiliano Alexis             | maxiobregon@outlook.com.ar     | MaxiObregon22              |  
 | 96612      | Zahr, Luciana Nadin                             | lucianazahr@gmail.com          | LucianaZahr                |
