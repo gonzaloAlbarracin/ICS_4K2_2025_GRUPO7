@@ -27,14 +27,16 @@
     - PARCIAL <<_N_>>/
       - EJERCICIOS
       - TOMA DE NOTAS
-    - CLASE GRABADAS
     - PRESENTACIONES
     - RESÚMENES
     - TEMPLATES
-  - **PLANIFICACIÓN/**
+  - **PLANIFICACIÓN**
   - **TRABAJOS/**
     - TRABAJOS DE INVESTIGACIÓN/
       - LINEAMIENTOS
       - TIN_<<_Nombre del Trabajo_>>
     - TRABAJOS PRÁCTICOS/
       - TPN_<<_Nombre del TP_>>
+
+
+
