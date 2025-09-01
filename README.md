@@ -8,7 +8,7 @@
 
 | **Legajo** | **Nombre**                                      | **Mail**                       |**Nombre de Usuario Github**| 
 |------------|-------------------------------------------------|--------------------------------|----------------------------|
-| 68719      | Albarracín, Gonzalo Nahuel                      | galbarracin16@gmail.com        |                            |
+| 68719      | Albarracín, Gonzalo Nahuel                      | galbarracin16@gmail.com        | gonzaloAlbarracin          |
 | 99395      | Baudo, Candela                                  | candelabaudo14@gmail.com       |                            |
 | 95069      | Hillar, Agustin Nicolás                         | agushillar8@gmail.com          | agus0808                   |
 | 85216      | Koncurat, Joaquin Ernesto                       | joaquinkoncurat@gmail.com      | joaquinkoncurat            |
