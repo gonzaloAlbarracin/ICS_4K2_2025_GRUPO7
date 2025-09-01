@@ -46,8 +46,8 @@
 | Presentaciones | Material   | <<_NN_>>_<<_NombreDelTemaAsociadoALaPresentación_>>.PDF        | //ICS_4K2_2025_GRUPO7/MATERIALES/PRESENTACIONES                           |
 | Resumen        | Material   | <<_NombrePropietario_>>_<<_NombreResumen_>>_Unidad<<_N_>>.PDF  | //ICS_4K2_2025_GRUPO7/MATERIALES/RESÚMENES                                |
 | Template       | Material   | ICS_TEMPLATE_<<_Nombre_>>.DOC                                  | //ICS_4K2_2025_GRUPO7/MATERIALES/TEMPLATES                                |
-| Planificación  |            | PlanificacionDelCuatrimestre_2025_4K2.PDF                      | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
-| Programa       |            | Programa_ICS_2025_4K2.PDF                                      | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
+| Planificación  |            | ICS_PlanificacionDelCuatrimestre_2025_4K2.PDF                      | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
+| Cronograma       |            | ICS_Cronograma_2025_4K2.PDF                                      | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
 
 ### Glosario
 
