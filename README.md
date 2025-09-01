@@ -33,7 +33,6 @@
   - **PLANIFICACIÓN**
   - **TRABAJOS/**
     - TRABAJOS DE INVESTIGACIÓN/
-      - LINEAMIENTOS
       - TIN_<<_Nombre del Trabajo_>>
     - TRABAJOS PRÁCTICOS/
       - TPN_<<_Nombre del TP_>>
