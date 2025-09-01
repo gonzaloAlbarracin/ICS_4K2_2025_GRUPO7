@@ -40,8 +40,9 @@
 
 ### Items de Configuracion
 
-| **Titulo**    | **Tipo**   | **Regla de Nombre**           | **Ubicacion**                                                            |
-|---------------|------------|-------------------------------|--------------------------------------------------------------------------|
-| Bibliografia  | Material   | NombreDelLibro.pdf            | //ICS_4K2_2025_GRUPO7/MATERIALES/BIBLIOGRAFIA/BIBLIOGRAFIA_DE_<<_TEMA_>> |
+| **Titulo**    | **Tipo**   | **Regla de Nombre**                         | **Ubicacion**                                                            |
+|---------------|------------|---------------------------------------------|--------------------------------------------------------------------------|
+| Bibliografia  | Material   | <<_NombreDelLibro_>>.PDF                    | //ICS_4K2_2025_GRUPO7/MATERIALES/BIBLIOGRAFIA/BIBLIOGRAFIA_DE_<<_TEMA_>> |
+| Ejercicios    | Practico   | EJ_<<_NombreDelCaso>_>_<<_Tema_>>._<<ext>>_ | //ICS_4K2_2025_GRUPO7/MATERIALES/PARCIAL<<_N_>>/EJERCICIOS               |
 
 
