@@ -48,7 +48,7 @@
 | Cronograma     | Proyecto | Cronograma_ICS_2025_4K2.XLSX                                   | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
 | Trabajo Practico Evaluable | Trabajos | TPEvaluable_<<_NN_>>_<<_NombreDelTP_>>.<<_ext_>>   | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS |
 | Trabajo de Investigacion | Trabajos | TrabajoDeInvestigacion_<<_N_>>_<<_NombreDelTrabajo_>>.<<_ext_>>| //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS DE INVESTIGACION        |
-| Nota de Clase   | Material | Notas_<<_FechaDeClase_>>_<<_TemaDeClase_>>.DOC               | //ICS_4K2_2025_GRUPO7/MATERIALES/PARCIAL<<_N_>>/TOMA DE NOTAS             |
+| Toma de notas   | Material | Notas_<<_FechaDeClase_>>_<<_TemaDeClase_>>.DOC               | //ICS_4K2_2025_GRUPO7/MATERIALES/PARCIAL<<_N_>>/TOMA DE NOTAS             |
 | Enunciados de Trabajos Practicos| Proyecto | ICS_Enunciados_TP_2025.pdf                 | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS
 
 ### Glosario
