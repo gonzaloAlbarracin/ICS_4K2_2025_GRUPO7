@@ -33,9 +33,9 @@
   - **PLANIFICACIÓN**
   - **TRABAJOS**/
     - TRABAJOS DE INVESTIGACIÓN/
-      - TIN_<<NOMBRE>>
+      - TIN_<<_NOMBRE_>>
     - TRABAJOS PRÁCTICOS/
-      - TPN_<<N>>
+      - TPN_<<_N_>>
 
 ### Items de Configuracion
 
