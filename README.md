@@ -42,7 +42,7 @@
 | Bibliografia   | Material    | <<_NombreDelLibro_>>.PDF                                       | //ICS_4K2_2025_GRUPO7/MATERIALES/BIBLIOGRAFIA/BIBLIOGRAFIA_DE_<<_TEMA_>>  |
 | Ejercicios     | Material    | Ejercicio_<<_NombreDelCaso>_>_<<_Tema_>>.<<_ext_>>             | //ICS_4K2_2025_GRUPO7/MATERIALES/PARCIAL<<_N_>>/EJERCICIOS                |
 | Presentaciones | Material | <<_NN_>>_<<_NombreDelTemaAsociadoALaPresentación_>>.PDF        | //ICS_4K2_2025_GRUPO7/MATERIALES/PRESENTACIONES                           |
-| Resumen        | Material | <<_NombrePropietario_>>_Unidad<<_N_>>.PDF                      | //ICS_4K2_2025_GRUPO7/MATERIALES/RESÚMENES                                |
+| Resumen        | Material | Resumen_<<_N_>>.PDF                                             | //ICS_4K2_2025_GRUPO7/MATERIALES/RESÚMENES                                |
 | Template       | Material | ICS_TEMPLATE_<<_Nombre_>>.DOC                                  | //ICS_4K2_2025_GRUPO7/MATERIALES/TEMPLATES                                |
 | Planificación  | Proyecto | PlanificacionDelCuatrimestre_ICS_2025_4K2.PDF                  | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
 | Cronograma     | Proyecto | Cronograma_ICS_2025_4K2.XLSX                                   | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
@@ -67,6 +67,8 @@
 |FechaDeClase                          |Fecha en formato DD/MM/AAAA de la clase a la que pertenece la toma de notas     |
 |TemaDeClase                           |Tema de la clase al cual hace referencia la toma de notas                       |
 |N                                     |Numero del 0 al 9                                                               |
+|NN                                    |Numero del 00 al 99                                                             |
+
 
 
 
