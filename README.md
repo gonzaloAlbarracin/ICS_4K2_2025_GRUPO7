@@ -20,20 +20,22 @@
 
 ### Estructura del repositorio
 
-- **ICS_4K2_2025_GRUPO7**
-  - **MATERIALES**
-    - BIBLIOGRAFÍA
+- **ICS_4K2_2025_GRUPO7**/
+  - **MATERIALES**/
+    - BIBLIOGRAFÍA/
       - BIBLIOGRAFIA DE <<_Tema_>>
-    - PARCIAL <<_N_>>
+    - PARCIAL <<_N_>>/
       - EJERCICIOS
       - TOMA DE NOTAS
     - PRESENTACIONES
     - RESÚMENES
     - TEMPLATES
   - **PLANIFICACIÓN**
-  - **TRABAJOS**
-    - TRABAJOS DE INVESTIGACIÓN
-    - TRABAJOS PRÁCTICOS
+  - **TRABAJOS**/
+    - TRABAJOS DE INVESTIGACIÓN/
+      - TIN_<<NOMBRE>>
+    - TRABAJOS PRÁCTICOS/
+      - TPN_<<N>>
 
 ### Items de Configuracion
 
