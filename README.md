@@ -48,11 +48,11 @@
 | Template       | Material | ICS_TEMPLATE_<<_Nombre_>>.<<_ext_>>                                  | //ICS_4K2_2025_GRUPO7/MATERIALES/TEMPLATES                                |
 | Planificación  | Proyecto | PlanificacionDelCuatrimestre_ICS_2025_4K2.PDF                  | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
 | Cronograma     | Proyecto | Cronograma_ICS_2025_4K2.XLSX                                   | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
-| Trabajo Practico Evaluable resuelto | Trabajos | TPEvaluable_<<_NN_>>_<<_NombreDelTP_>>.<<_ext_>>   | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS |
-| Trabajo Practico No Evaluable resuelto | Trabajos | TPNoEvaluable_<<_NN_>>_<<_NombreDelTP_>>.<<_ext_>>   | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS |
-| Trabajo de Investigacion | Trabajos | TrabajoDeInvestigacion_<<_N_>>_<<_NombreDelTrabajo_>>.<<_ext_>>| //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS DE INVESTIGACION        |
-| Toma de notas   | Material | Notas_<<_FechaDeClase_>>_<<_TemaDeClase_>>.DOC               | //ICS_4K2_2025_GRUPO7/MATERIALES/PARCIAL<<_N_>>/TOMA DE NOTAS             |
-| Enunciados de Trabajos Practicos| Trabajos | ICS_Enunciado_TP<<_N_>>_2025.pdf                 | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS
+| Trabajo Practico Evaluable resuelto | Trabajos | TPEvaluable_<<_NN_>>_<<_NombreDelTP_>>.<<_ext_>>   | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS/TP_<<_N_>> |
+| Trabajo Practico No Evaluable resuelto | Trabajos | TPNoEvaluable_<<_NN_>>_<<_NombreDelTP_>>.<<_ext_>>   | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS/TP_<<_N_>>|
+| Trabajo de Investigacion | Trabajos | TrabajoDeInvestigacion_<<_N_>>_<<_NombreDelTrabajo_>>.<<_ext_>>| //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS DE INVESTIGACION|
+| Toma de notas   | Material | Notas_<<_FechaDeClase_>>_<<_TemaDeClase_>>.DOC | //ICS_4K2_2025_GRUPO7/MATERIALES/PARCIAL<<_N_>>/TOMA DE NOTAS             |
+| Enunciados de Trabajos Practicos| Trabajos | PRACTICO<<_N_>><<_NombreDelTrabajo_>>.PDF | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS/TP_<<_N_>>
 
 ### Glosario
 
