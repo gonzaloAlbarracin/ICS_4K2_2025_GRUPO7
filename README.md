@@ -48,10 +48,11 @@
 | Template       | Material | ICS_TEMPLATE_<<_Nombre_>>.<<_ext_>>                                  | //ICS_4K2_2025_GRUPO7/MATERIALES/TEMPLATES                                |
 | Planificación  | Proyecto | PlanificacionDelCuatrimestre_ICS_2025_4K2.PDF                  | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
 | Cronograma     | Proyecto | Cronograma_ICS_2025_4K2.XLSX                                   | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
-| Trabajo Practico Evaluable | Trabajos | TPEvaluable_<<_NN_>>_<<_NombreDelTP_>>.<<_ext_>>   | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS |
+| Trabajo Practico Evaluable resuelto | Trabajos | TPEvaluable_<<_NN_>>_<<_NombreDelTP_>>.<<_ext_>>   | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS |
+| Trabajo Practico No Evaluable resuelto | Trabajos | TPNoEvaluable_<<_NN_>>_<<_NombreDelTP_>>.<<_ext_>>   | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS |
 | Trabajo de Investigacion | Trabajos | TrabajoDeInvestigacion_<<_N_>>_<<_NombreDelTrabajo_>>.<<_ext_>>| //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS DE INVESTIGACION        |
 | Toma de notas   | Material | Notas_<<_FechaDeClase_>>_<<_TemaDeClase_>>.DOC               | //ICS_4K2_2025_GRUPO7/MATERIALES/PARCIAL<<_N_>>/TOMA DE NOTAS             |
-| Enunciados de Trabajos Practicos| Proyecto | ICS_Enunciados_TP_2025.pdf                 | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS
+| Enunciados de Trabajos Practicos| Trabajos | ICS_Enunciado_TP<<_N_>>_2025.pdf                 | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS
 
 ### Glosario
 
@@ -75,5 +76,5 @@
 
 
 ### Línea Base
-Definimos como línea base de nuestro repositorio el momento en que recibamos la devolución por parte de los docentes en cada trabajo práctico evaluable y de investigación.
+Definimos como línea base de nuestro repositorio el momento en que recibamos la devolución por parte de los docentes en cada trabajo práctico evaluable y de investigación ya que consideramos apropiado tener una retroalimentación y que quede clara por parte de todos los integrantes para asegurar la línea base de nuestro proyecto. 
 
