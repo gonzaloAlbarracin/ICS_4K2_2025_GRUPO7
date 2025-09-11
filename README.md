@@ -41,18 +41,18 @@
 
 | **Titulo**     | **Tipo**   | **Regla de Nombre**                                            | **Ubicacion**                                                             |
 |----------------|------------|----------------------------------------------------------------|---------------------------------------------------------------------------|
-| Bibliografia   | Material    | <<_NombreDelLibro_>>.PDF                                       | //ICS_4K2_2025_GRUPO7/MATERIALES/BIBLIOGRAFIA/BIBLIOGRAFIA_DE_<<_TEMA_>>  |
+| Bibliografia   | Material    | <<_NombreDelLibro_>>.<<_ext_>>                                        | //ICS_4K2_2025_GRUPO7/MATERIALES/BIBLIOGRAFIA/BIBLIOGRAFIA_DE_<<_TEMA_>>  |
 | Ejercicios     | Material    | Ejercicio_<<_NombreDelCaso>_>_<<_Tema_>>.<<_ext_>>             | //ICS_4K2_2025_GRUPO7/MATERIALES/PARCIAL<<_N_>>/EJERCICIOS                |
-| Presentaciones | Material | <<_NN_>>_<<_NombreDelTemaAsociadoALaPresentación_>>.PDF        | //ICS_4K2_2025_GRUPO7/MATERIALES/PRESENTACIONES                           |
-| Resumen        | Material | Resumen_<<_N_>>.PDF                                             | //ICS_4K2_2025_GRUPO7/MATERIALES/RESÚMENES                                |
+| Presentaciones | Material | <<_NN_>>_<<_NombreDelTemaAsociadoALaPresentación_>>.<<_ext_>>         | //ICS_4K2_2025_GRUPO7/MATERIALES/PRESENTACIONES                           |
+| Resumen        | Material | Resumen_<<_N_>>.<<_ext_>>                                              | //ICS_4K2_2025_GRUPO7/MATERIALES/RESÚMENES                                |
 | Template       | Material | ICS_TEMPLATE_<<_Nombre_>>.<<_ext_>>                                  | //ICS_4K2_2025_GRUPO7/MATERIALES/TEMPLATES                                |
-| Planificación  | Proyecto | PlanificacionDelCuatrimestre_ICS_2025_4K2.PDF                  | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
-| Cronograma     | Proyecto | Cronograma_ICS_2025_4K2.XLSX                                   | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
+| Planificación  | Proyecto | PlanificacionDelCuatrimestre_ICS_2025_4K2.<<_ext_>>                   | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
+| Cronograma     | Proyecto | Cronograma_ICS_2025_4K2.<<_ext_>>                                    | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
 | Trabajo Practico Evaluable resuelto | Trabajos | TPEvaluable_<<_NN_>>_<<_NombreDelTP_>>.<<_ext_>>   | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS/TP_<<_N_>> |
 | Trabajo Practico No Evaluable resuelto | Trabajos | TPNoEvaluable_<<_NN_>>_<<_NombreDelTP_>>.<<_ext_>>   | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS/TP_<<_N_>>|
 | Trabajo de Investigacion | Trabajos | TrabajoDeInvestigacion_<<_N_>>_<<_NombreDelTrabajo_>>.<<_ext_>>| //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS DE INVESTIGACION|
-| Toma de notas   | Material | Notas_<<_FechaDeClase_>>_<<_TemaDeClase_>>.DOC | //ICS_4K2_2025_GRUPO7/MATERIALES/PARCIAL<<_N_>>/TOMA DE NOTAS             |
-| Enunciados de Trabajos Practicos| Trabajos | PRACTICO<<_N_>><<_NombreDelTrabajo_>>.PDF | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS/TP_<<_N_>>
+| Toma de notas   | Material | Notas_<<_FechaDeClase_>>_<<_TemaDeClase_>>.<<_ext_>>  | //ICS_4K2_2025_GRUPO7/MATERIALES/PARCIAL<<_N_>>/TOMA DE NOTAS             |
+| Enunciados de Trabajos Practicos| Trabajos | PRACTICO<<_N_>><<_NombreDelTrabajo_>>.<<_ext_>>  | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS/TP_<<_N_>>
 
 ### Glosario
 
