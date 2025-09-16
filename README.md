@@ -46,8 +46,8 @@
 | Presentaciones | Material | <<_NN_>>_<<_NombreDelTemaAsociadoALaPresentación_>>.<<_ext_>>         | //ICS_4K2_2025_GRUPO7/MATERIALES/PRESENTACIONES                           |
 | Resumen        | Material | Resumen_<<_N_>>.<<_ext_>>                                              | //ICS_4K2_2025_GRUPO7/MATERIALES/RESÚMENES                                |
 | Template       | Material | ICS_TEMPLATE_<<_Nombre_>>.<<_ext_>>                                  | //ICS_4K2_2025_GRUPO7/MATERIALES/TEMPLATES                                |
-| Planificación  | Proyecto | PlanificacionDelCuatrimestre_ICS_2025_4K2.<<_ext_>>                   | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
-| Cronograma     | Proyecto | Cronograma_ICS_2025_4K2.<<_ext_>>                                    | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
+| Planificación  | Cátedra | PlanificacionDelCuatrimestre_ICS_2025_4K2.<<_ext_>>                   | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
+| Cronograma     | Cátedra | Cronograma_ICS_2025_4K2.<<_ext_>>                                    | //ICS_4K2_2025_GRUPO7/PLANIFICACIÓN                                       |
 | Trabajo Practico Evaluable resuelto | Trabajos | TPEvaluable_<<_NN_>>_<<_NombreDelTP_>>.<<_ext_>>   | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS/TP_<<_N_>> |
 | Trabajo Practico No Evaluable resuelto | Trabajos | TPNoEvaluable_<<_NN_>>_<<_NombreDelTP_>>.<<_ext_>>   | //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS PRACTICOS/TP_<<_N_>>|
 | Trabajo de Investigacion | Trabajos | TrabajoDeInvestigacion_<<_N_>>_<<_NombreDelTrabajo_>>.<<_ext_>>| //ICS_4K2_2025_GRUPO7/TRABAJOS/TRABAJOS DE INVESTIGACION|
