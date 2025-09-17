@@ -61,7 +61,7 @@
 |NombreDelLibro                        |Nombre del libro perteneciente al material bibliografico de la catedra          |
 |NombreDelCaso                         |Nombre del caso referido a un ejercicio                                         |
 |Tema                                  |Tema al cual esta referido el ejercicio                                         |
-|ext                                   |Extencion o tipo de un archivo que puede variar                                 |
+|ext                                   |Extencion o tipo de un archivo que puede variar (.pdf, .odt, .xlsx, .png, .jpg, .txt, .docx, .ods) |
 |NombreDelTemaAsociadoALaPresentación  |Tema que se expone durante la presentacion                                      |
 |Nombre                                |Nombre significativo del template segun el tema o parcial al que hace referencia|
 |NombrePropietario                     |Nombre de la persona a la cual pertencece un resumen                            |
