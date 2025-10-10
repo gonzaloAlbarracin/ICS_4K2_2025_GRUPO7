@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Comprar Entradas - EcoHarmony Park</title>
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    
+    <h1>¡Compra tu entrada para EcoHarmony Park, no te quedes afuera! 😄</h1>
+
+    <form id="formCompra" novalidate>
+        <!-- FIELDSET: Datos principales -->
+        <fieldset>
+            <legend>Datos de la compra</legend>
+
+            <label for="fechaVisita">Fecha <span class="req">*</span></label>
+            <input type="date" id="fechaVisita" required>
+            <small>Selecciona la fecha de visita al parque (máx. 1 mes, no lunes, no 25/12 ni 01/01)</small>
+
+            <label for="cantidadEntradas">Cantidad de entradas <span class="req">*</span></label>
+            <div style="display:flex; align-items:center; gap:10px;">
+               
+                <input type="number" id="cantidadEntradas" min="1" max="10" placeholder="Ingrese cantidad" required>
+            </div>
+            <small>Ingrese la cantidad de entradas deseadas (máx. 10)</small>
+
+            <!-- Generamos siempre grilla -->
+
+                <table id="grillaVisitantes">
+                    <tr>
+                        <th>Visitante</th>
+                        <th>Ingrese Edad</th>
+                        <th>Tipo de entrada</th>
+                    </tr>
+                </table>
+                <button id="btnGenerar" type="button">Generar grilla</button> 
+                <!--abria que borrar los visitantes y que se generen con el boton-->
+                
+            </div>
+    
+        </fieldset>
+
+        <!-- TOTAL -->
+        <fieldset>
+            <legend>Resumen</legend>
+            <p id="total">Total: $0</p>
+        </fieldset>
+
+        <!-- FORMA DE PAGO -->
+        <fieldset>
+            <legend>Seleccione forma de pago <span class="req">*</span></legend>
+            <label><input type="radio" name="pago" value="efectivo"> Efectivo</label><br>
+            <label><input type="radio" name="pago" value="tarjeta"> Tarjeta de débito/crédito (Mercado Pago)</label>
+        </fieldset>
+
+        <div class="acciones">
+            <button type="submit" id="btnComprar">Comprar</button>
+        </div>
+    </form>
+
+    <!-- RESULTADOS -->
+    <section id="resultados">
+        <fieldset>
+            <legend>Resultados de las pruebas</legend>
+            <ul id="listaResultados"></ul>
+        </fieldset>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
