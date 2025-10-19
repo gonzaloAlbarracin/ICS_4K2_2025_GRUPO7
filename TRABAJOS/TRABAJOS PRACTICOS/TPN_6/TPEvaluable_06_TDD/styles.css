@@ -1,3 +1,138 @@
+/* Navbar EcoHarmony */
+.navbar-eco {
+  width: 100%;
+  background: linear-gradient(90deg, var(--verde-claro) 0%, var(--verde-pigmento) 100%);
+  color: var(--verde-oscuro);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px;
+  border-radius: 0 0 14px 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(61, 163, 93, 0.08);
+  font-family: 'Montserrat', sans-serif;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.navbar-eco {
+  width: 100vw;
+  max-width: 100vw;
+  background: linear-gradient(90deg, var(--verde-claro) 0%, var(--verde-pigmento) 100%);
+  color: var(--verde-oscuro);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px;
+  border-radius: 0 0 14px 14px;
+  margin: 0 auto 18px auto;
+  box-shadow: 0 4px 16px rgba(61, 163, 93, 0.08);
+  font-family: 'Montserrat', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+#navbar-eco-container {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--verde-nyanza);
+  color: var(--verde-oscuro);
+  margin:0;
+  padding: 160px 28px 28px 28px;
+  line-height:1.5;
+}
+.navbar-eco__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(19, 70, 17, 0.12);
+}
+.navbar-eco__btn:active {
+  transform: translateY(0);
+}
+#btnGenerar:disabled, .btn-generar:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  filter: grayscale(0.3) brightness(1.1);
+  box-shadow: none;
+}
+#btnGenerar, .btn-generar {
+  background: linear-gradient(180deg,var(--verde-medio),var(--verde-oscuro));
+  color:white;
+  border:none;
+  padding:16px 36px;
+  border-radius:12px;
+  font-size:1.05rem;
+  cursor:pointer;
+  font-weight:700;
+  transition:transform .08s ease, box-shadow .08s ease;
+  margin-top: 12px;
+}
+
+#btnGenerar:hover, .btn-generar:hover {
+  transform:translateY(-2px); 
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+#btnGenerar:active, .btn-generar:active {
+  transform:translateY(0);
+}
+/* Espaciado y alineación para la tabla de visitantes */
+#grillaVisitantes {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  margin-bottom: 10px;
+}
+#grillaVisitantes th, #grillaVisitantes td {
+  padding: 6px 10px;
+  text-align: left;
+  vertical-align: middle;
+}
+#grillaVisitantes th {
+  font-weight: 600;
+  background: #f8fff0;
+}
+#grillaVisitantes input[type="number"] {
+  width: 80px;
+  padding: 4px 6px;
+  margin-right: 0;
+  border-radius: 6px;
+  border: 1px solid #b2d8b2;
+}
+#grillaVisitantes select {
+  min-width: 130px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  border: 1px solid #b2d8b2;
+}
+#grillaVisitantes td:last-child {
+  text-align: center;
+  width: 40px;
+}
+#grillaVisitantes button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto;
+}
+/* Anula el borde rojo nativo de los required no válidos */
+input:required:invalid, input:invalid, input:required:focus:invalid {
+  box-shadow: none !important;
+  border-color: #ced4da !important;
+}
+
+/* El feedback visual lo maneja el JS con borderColor */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 :root{
@@ -48,6 +183,12 @@ input[type="date"], input[type="number"], select{
   border:2px solid var(--verde-pigmento);
   margin-top:6px;
   font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+input[type="date"]:invalid, input[type="number"]:invalid {
+  border-color: #ff0000;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
 }
 
 .visitante {
@@ -140,8 +281,51 @@ small{ display:block; color:#666; margin-top:6px; font-size:0.9em}
 
 .req{ color:red; }
 
+/* Estilos personalizados para Toastify */
+.toastify {
+  padding: 16px 20px !important;
+  border-radius: 12px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  min-width: 300px !important;
+  max-width: 500px !important;
+  text-align: center !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.toastify.on {
+  transform: translateX(-50%) !important;
+  left: 50% !important;
+}
+
 @media (max-width:720px){
   form{ padding:18px; }
   input[type="date"], input[type="number"], select{ width:100%; }
   #btnComprar{ width:100%; }
+  
+  /* Toasts responsive */
+  .toastify {
+    min-width: 280px !important;
+    max-width: 90% !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Centrado real de Toastify (independiente del layout/Bootstrap) */
+.toastify-center {
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  max-width: 92vw;              /* evita desbordes en mobile */
+  width: max-content;           /* que tome el ancho del texto */
+  z-index: 9999 !important;     /* por si hay modales/cosas arriba */
+}
+
+/* separo un toque de los bordes superiores/ inferiores */
+.toastify-top-offset {
+  margin-top: 16px;
+}
+.toastify-bottom-offset {
+  margin-bottom: 16px;
 }
