@@ -11,6 +11,9 @@ function configurarInputFecha() {
     fechaInput.setAttribute('min', fechaMinima);
     fechaInput.setAttribute('max', fechaMaxima);
     
+    // Deshabilitar los lunes en el calendario
+    // No se genera ni asocia ningún datalist, solo se mantiene el calendario nativo
+
     // Agregar validación más estricta
     fechaInput.addEventListener('input', validarFechaEnTiempoReal);
     fechaInput.addEventListener('blur', validarFechaEnTiempoReal);
@@ -59,7 +62,20 @@ function validarFechaEnTiempoReal() {
             fechaInput.setCustomValidity('');
         }
 
-        // Limpiar el campo después de un breve delay si sigue siendo inválido
+        // Si es lunes, mostrar solo un toast y limpiar el campo
+        if (fechaInput.value) {
+            const fecha = new Date(fechaInput.value + 'T00:00:00');
+            if (fecha.getDay() === 1) {
+                mostrarMensajeError("Los lunes el parque permanece cerrado. Por favor, seleccione otro día.");
+                fechaInput.value = '';
+                fechaInput.style.borderColor = '';
+                fechaInput.setCustomValidity('');
+                fechaInput.focus();
+                return;
+            }
+        }
+
+        // Limpiar el campo después de un breve delay si sigue siendo inválido (no lunes)
         setTimeout(() => {
             if (fechaInput.value && !validarFecha(false)) {
                 const fechaOriginal = fechaInput.value;
@@ -77,8 +93,6 @@ function validarFechaEnTiempoReal() {
                     mensaje += "no se permiten fechas pasadas";
                 } else if (fecha > unMes) {
                     mensaje += "máximo 1 mes de anticipación";
-                } else if (fecha.getDay() === 1) {
-                    mensaje += "los lunes está cerrado";
                 } else if ((fecha.getDate() === 25 && fecha.getMonth() === 11) || 
                           (fecha.getDate() === 1 && fecha.getMonth() === 0)) {
                     mensaje += "cerrado en fechas especiales";
@@ -255,58 +269,54 @@ function validarCantidadEntradas() {
     return true; // si es válido
 }
 
-function generarGrilla() { 
+function generarGrilla() {
     const cantidad = obtenerCantidad();
     const tabla = obtenerGrilla();
-   
-    // Eliminar todas las filas
-    while (tabla.rows.length > 0) {
-        tabla.deleteRow(0);
-    }
+    const tbody = tabla.querySelector('tbody');
+    const thead = tabla.querySelector('thead');
 
-    // Si cantidad es válida, crear encabezado y filas
+    // limpiar solo el cuerpo (no tocar el thead)
+    tbody.innerHTML = '';
+
+    // Mostrar encabezado solo si hay visitantes
     if (cantidad > 0) {
-        // Crear encabezado
-        const thead = tabla.createTHead ? tabla.createTHead() : tabla;
-        const headerRow = tabla.insertRow();
-        headerRow.className = 'grilla-header';
-        const th1 = document.createElement('th');
-        th1.textContent = 'Visitante';
-        headerRow.appendChild(th1);
-        const th2 = document.createElement('th');
-        th2.textContent = 'Ingrese edad';
-        headerRow.appendChild(th2);
-        const th3 = document.createElement('th');
-        th3.textContent = 'Tipo de entrada';
-        headerRow.appendChild(th3);
-        const th4 = document.createElement('th');
-        th4.textContent = '';
-        headerRow.appendChild(th4);
-
-        // Crear filas de visitantes
+        if (thead) thead.style.display = '';
         for (let i = 1; i <= cantidad; i++) {
-            const fila = tabla.insertRow();
-            fila.style.verticalAlign = 'middle';
-            // Columna Visitante
-            const celdaVisitante = fila.insertCell();
-            celdaVisitante.textContent = `Visitante ${i}`;
-            celdaVisitante.style.padding = '8px 4px';
-            // Columna Edad
-            const celdaEdad = fila.insertCell();
-            celdaEdad.style.padding = '8px 4px';
-            const inputEdad = document.createElement("input");
-            inputEdad.type = "number";
-            inputEdad.min = "1";
-            inputEdad.max = "99";
+            const tr = document.createElement('tr');
+            tr.style.verticalAlign = 'middle';
+
+            // Visitante
+            const tdV = document.createElement('td');
+            tdV.textContent = `Visitante ${i}`;
+            tdV.style.padding = '8px 4px';
+            tr.appendChild(tdV);
+
+            // Edad
+            const tdE = document.createElement('td');
+            tdE.style.padding = '8px 4px';
+            const inputEdad = document.createElement('input');
+            inputEdad.type = 'number';
+            inputEdad.min = '1';
+            inputEdad.max = '99';
             inputEdad.id = `edad${i}`;
             inputEdad.name = `edad${i}`;
             inputEdad.style.width = '70px';
             inputEdad.style.marginRight = '8px';
-            celdaEdad.appendChild(inputEdad);
-            // Columna Tipo de entrada
-            const celdaTipo = fila.insertCell();
-            celdaTipo.style.padding = '8px 4px';
-            const selectTipo = document.createElement("select");
+            // Validación en tiempo real para edad
+            inputEdad.addEventListener('input', function() {
+                if (Number(inputEdad.value) > 99) {
+                    inputEdad.value = 99;
+                    mostrarMensajeError('La edad máxima permitida es 99.');
+                }
+                actualizarTotal();
+            });
+            tdE.appendChild(inputEdad);
+            tr.appendChild(tdE);
+
+            // Tipo
+            const tdT = document.createElement('td');
+            tdT.style.padding = '8px 4px';
+            const selectTipo = document.createElement('select');
             selectTipo.id = `tipo${i}`;
             selectTipo.name = `tipo${i}`;
             selectTipo.innerHTML = `
@@ -314,81 +324,75 @@ function generarGrilla() {
                 <option value="general">General</option>
                 <option value="vip">VIP</option>
             `;
-            selectTipo.style.marginRight = '8px';
-            celdaTipo.appendChild(selectTipo);
-            // Columna Botón Eliminar
-            const celdaEliminar = fila.insertCell();
-            celdaEliminar.style.padding = '8px 4px';
+            tdT.appendChild(selectTipo);
+            tr.appendChild(tdT);
+
+            // Botón eliminar (tachito)
+            const tdEliminar = document.createElement('td');
+            tdEliminar.style.textAlign = 'center';
+            tdEliminar.style.width = '40px';
             const btnEliminar = document.createElement('button');
             btnEliminar.type = 'button';
+            btnEliminar.innerHTML = '🗑️';
             btnEliminar.title = 'Eliminar visitante';
-            btnEliminar.innerHTML = '<span style="font-size:18px; color:#c00;">🗑️</span>';
             btnEliminar.style.background = 'none';
             btnEliminar.style.border = 'none';
             btnEliminar.style.cursor = 'pointer';
-            btnEliminar.onclick = function() {
-                tabla.deleteRow(fila.rowIndex);
-                // Si ya no quedan filas de visitantes, eliminar encabezado
-                if (tabla.rows.length === 1) {
-                    tabla.deleteRow(0);
-                }
+            btnEliminar.style.fontSize = '1.2em';
+            btnEliminar.addEventListener('click', function() {
+                tr.remove();
                 actualizarTotal();
-            };
-            celdaEliminar.appendChild(btnEliminar);
-            // Agregar listeners para recalcular automáticamente
-            inputEdad.addEventListener("input", actualizarTotal);
-            selectTipo.addEventListener("change", actualizarTotal);
+            });
+            tdEliminar.appendChild(btnEliminar);
+            tr.appendChild(tdEliminar);
+
+            selectTipo.addEventListener('change', actualizarTotal);
+
+            tbody.appendChild(tr);
         }
-    }
-    // Calcula el total inicial (por si ya había datos)
-    actualizarTotal();
-
-}
-
-function validarVisitantes() { //deberia validar que se hayan completado los datos de todos los visitantes
-    const tabla = obtenerGrilla();
-    const cantidad = obtenerCantidad();
-    let completados = 0;
-
-    for (let i = 1; i <= cantidad; i++) {
-        const fila = tabla.rows[i];
-        const edad = fila.cells[1].querySelector("input").value;
-        const tipo = fila.cells[2].querySelector("select").value;
-
-        if (edad && tipo) {
-            completados++;
-        }
-    }    
-    
-    if (completados === cantidad) {
-        console.log("Todos los visitantes completaron sus datos.");
-    return true;
     } else {
-        console.warn("⚠️ Datos incompletos o incorrectos.");
-        mostrarMensajeError("Debe completar los datos de todos los visitantes según la cantidad de entradas ingresadas.");
-        return false;
+        if (thead) thead.style.display = 'none';
     }
 
+    actualizarTotal();
 }
 
-function obtenerGrillaActualizada() { //guarda datos de visitantes en un array
-    const tabla = obtenerGrilla();
-    const cantidad = obtenerCantidad();
-    const visitantes = [];
 
-    for (let i = 1; i <= cantidad; i++) {
-        const fila = tabla.rows[i];
-        console.log(fila)
-        const edad = Number(fila.cells[1].querySelector("input").value);
-        const tipo = fila.cells[2].querySelector("select").value;
+function validarVisitantes() {
+  const cantidad = obtenerCantidad();
+  const tbody = obtenerGrilla().querySelector('tbody');
+  const filas = Array.from(tbody.querySelectorAll('tr'));
+  let completados = 0;
 
-        if (!edad || !tipo) continue; // se omiten filas incompletas
+  for (let i = 0; i < cantidad; i++) {
+    const fila = filas[i];
+    if (!fila) break;
+    const edad = fila.cells[1].querySelector('input').value;
+    const tipo = fila.cells[2].querySelector('select').value;
+    if (edad && tipo) completados++;
+  }
 
-        visitantes.push({ edad, tipo });
-    }
+  if (completados === cantidad) return true;
 
-    return visitantes;
+  mostrarMensajeError("Debe completar los datos de todos los visitantes según la cantidad de entradas ingresadas.");
+  return false;
 }
+
+function obtenerGrillaActualizada() {
+  const tbody = obtenerGrilla().querySelector('tbody');
+  const filas = Array.from(tbody.querySelectorAll('tr'));
+  const visitantes = [];
+
+  filas.forEach((fila) => {
+    const edad = Number(fila.cells[1].querySelector('input').value);
+    const tipo = fila.cells[2].querySelector('select').value;
+    if (!edad || !tipo) return;
+    visitantes.push({ edad, tipo });
+  });
+
+  return visitantes;
+}
+
 
 function calcularTotal() { // solo se encarga de sumar precios y calcular descuentos (no toca el HTML)
     const visitantes = obtenerGrillaActualizada();
@@ -455,47 +459,77 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("btnValidar")?.addEventListener("click", validarVisitantes); //mpdfi
 
     // Validar formulario completo al enviar
-    document.getElementById("formCompra").addEventListener("submit", (e) => {
-        // Prevenir validación nativa y feedback visual del navegador
-        e.preventDefault();
-        e.stopPropagation();
+    document.getElementById("formCompra").addEventListener("submit", async (e) => {
+    // Prevenir validación nativa y feedback visual del navegador
+    e.preventDefault();
+    e.stopPropagation();
 
-        let valido = true;
+    let valido = true;
 
-        // Validar fecha
-        if (!validarFecha()) {
-            fechaInput.style.borderColor = '#ff0000';
-            valido = false;
-        } else {
-            fechaInput.style.borderColor = '#28a745';
+    const fechaInput = document.getElementById('fechaVisita');
+    const cantidadInput = document.getElementById('cantidadEntradas');
+
+    // Validar fecha
+    if (!validarFecha()) {
+        fechaInput.style.borderColor = '#ff0000';
+        valido = false;
+    } else {
+        fechaInput.style.borderColor = '#28a745';
+    }
+
+    // Validar cantidad de entradas
+    if (!validarCantidadEntradas()) {
+        cantidadInput.style.borderColor = '#ff0000';
+        valido = false;
+    } else {
+        cantidadInput.style.borderColor = '#28a745';
+    }
+
+    // Validar datos de visitantes
+    if (!validarVisitantes()) {
+        valido = false;
+    }
+
+    // Validar forma de pago
+    const formaPago = document.querySelector('input[name="pago"]:checked');
+    if (!formaPago) {
+        mostrarMensajeError("Por favor, seleccione una forma de pago.");
+        valido = false;
+    }
+
+    // Si todas las validaciones pasan → ENVIAR MAIL
+    if (valido) {
+        const btnComprar = document.getElementById('btnComprar');
+        // Si es Mercado Pago, mostrar mensaje de "Pagando..." en el botón y delay
+        if (formaPago.value === 'tarjeta') {
+            const originalText = btnComprar.textContent;
+            btnComprar.textContent = 'Pagando...';
+            btnComprar.disabled = true;
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            btnComprar.textContent = originalText;
+            btnComprar.disabled = false;
         }
+        try {
+            const ok = await enviarEmailResumenHardcodeado();
+            if (!ok) {
+                mostrarMensajeError("No pudimos enviar el email. Probá de nuevo.");
+                return;
+            }
+            mostrarMensajeExito("📧 Resumen enviado por email.");
+            mostrarMensajeExito("🎉 ¡Compra realizada exitosamente! ¡Te esperamos! 🌿");
 
-        // Validar cantidad de entradas
-        if (!validarCantidadEntradas()) {
-            cantidadInput.style.borderColor = '#ff0000';
-            valido = false;
-        } else {
-            cantidadInput.style.borderColor = '#28a745';
+            // Limpiar campos y grilla
+            e.target.reset();
+            document.getElementById("grillaVisitantes").querySelector('tbody').innerHTML = "";
+            document.getElementById("grillaVisitantes").querySelector('thead').style.display = 'none';
+            document.getElementById("total").textContent = "Total: $0";
+        } catch (err) {
+            console.error(err);
+            mostrarMensajeError("Ocurrió un error al enviar el email.");
         }
-
-        // Validar datos de visitantes
-        if (!validarVisitantes()) {
-            valido = false;
-        }
-
-        // Validar forma de pago
-        const formaPago = document.querySelector('input[name="pago"]:checked');
-        if (!formaPago) {
-            mostrarMensajeError("Por favor, seleccione una forma de pago.");
-            valido = false;
-        }
-
-        // Si todas las validaciones pasan
-        if (valido) {
-            mostrarMensajeExito("🎉 ¡Compra realizada exitosamente! Gracias por elegir EcoHarmony Park. ¡Te esperamos! 🌿");
-            // Si querés, podés hacer e.target.submit() acá si realmente querés enviar el form
-        }
+    }
     });
+
 
     // Validar fecha cuando cambie el input de fecha
     fechaInput.addEventListener("change", validarFecha);
@@ -533,4 +567,3 @@ async function enviarEmailResumenHardcodeado() {
   return resp.ok;
 }
 // Faltan las validaciones TDD
-

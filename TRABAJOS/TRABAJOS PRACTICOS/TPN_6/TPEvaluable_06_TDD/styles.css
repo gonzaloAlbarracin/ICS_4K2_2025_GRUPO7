@@ -50,15 +50,21 @@ body{
   background-color: var(--verde-nyanza);
   color: var(--verde-oscuro);
   margin:0;
-  padding: 160px 28px 28px 28px;
+  padding: 65px 28px 28px 28px;
   line-height:1.5;
 }
-.navbar-eco__btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(19, 70, 17, 0.12);
+#navbar-eco-container .navbar-eco__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
-.navbar-eco__btn:active {
-  transform: translateY(0);
+.navbar-eco__photo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--verde-medio);
+  box-shadow: 0 2px 8px rgba(61,163,93,0.10);
 }
 #btnGenerar:disabled, .btn-generar:disabled {
   opacity: 0.55;
@@ -143,15 +149,7 @@ input:required:invalid, input:invalid, input:required:focus:invalid {
   --verde-nyanza: #E8FCCF;
 }
 
-*{box-sizing:border-box}
-body{
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--verde-nyanza);
-  color: var(--verde-oscuro);
-  margin:0;
-  padding:28px;
-  line-height:1.5;
-}
+
 
 h1{
   text-align:center;
@@ -244,6 +242,13 @@ fieldset{
   padding:12px 16px;
   margin-top:14px;
   background: #fff;
+}
+
+/* Reduce el espacio entre los métodos de pago */
+fieldset legend + label,
+fieldset legend + label + br + label {
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
 }
 
 legend{
