@@ -1,4 +1,4 @@
-function configurarInputFecha() {
+export function configurarInputFecha() {
     const fechaInput = document.getElementById('fechaVisita');
     const hoy = new Date();
     const unMesAdelante = new Date(hoy);
@@ -20,7 +20,7 @@ function configurarInputFecha() {
     fechaInput.addEventListener('keydown', bloquearTeclasInvalidas);
 }
 
-function bloquearTeclasInvalidas(e) {
+export function bloquearTeclasInvalidas(e) {
     // Permitir teclas de navegación y control
     const teclasPermitidas = [
         'Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown',
@@ -41,7 +41,7 @@ function bloquearTeclasInvalidas(e) {
     return false;
 }
 
-function validarFechaEnTiempoReal() {
+export function validarFechaEnTiempoReal() {
     const fechaInput = document.getElementById('fechaVisita');
     
     // Si está vacío, no mostrar error ni borde
@@ -112,7 +112,7 @@ function validarFechaEnTiempoReal() {
     }
 }
 
-function mostrarMensajeError(mensaje) {
+export function mostrarMensajeError(mensaje) {
     Toastify({
         text: mensaje,
         duration: 4000,
@@ -131,7 +131,7 @@ function mostrarMensajeError(mensaje) {
     }).showToast();
 }
 
-function mostrarMensajeExito(mensaje) {
+export function mostrarMensajeExito(mensaje) {
     Toastify({
         text: mensaje,
         duration: 3000,
@@ -149,7 +149,7 @@ function mostrarMensajeExito(mensaje) {
     }).showToast();
 }
 
-function mostrarMensajeInfo(mensaje) {
+export function mostrarMensajeInfo(mensaje) {
     Toastify({
         text: mensaje,
         duration: 3000,
@@ -167,7 +167,7 @@ function mostrarMensajeInfo(mensaje) {
     }).showToast();
 }
 
-function mostrarMensajeBienvenida(mensaje) {
+export function mostrarMensajeBienvenida(mensaje) {
     Toastify({
         text: mensaje,
         duration: 4000,
@@ -187,7 +187,7 @@ function mostrarMensajeBienvenida(mensaje) {
     }).showToast();
 }
 
-function validarFecha(mostrarError = true) {
+export function validarFecha(mostrarError = true) {
     const fechaInput = document.getElementById('fechaVisita');
     const fechaSeleccionada = new Date(fechaInput.value + 'T00:00:00'); // Evita problemas de zona horaria
     const fechaActual = new Date();
@@ -235,15 +235,15 @@ function validarFecha(mostrarError = true) {
     return true; // Fecha válida
 }
 
-function obtenerCantidad(){
+export function obtenerCantidad(){
     return Number(document.getElementById('cantidadEntradas').value);
 }
 
-function obtenerGrilla() {
+export function obtenerGrilla() {
     return document.getElementById("grillaVisitantes");
 }
 
-function validarCantidadEntradas() {
+export function validarCantidadEntradas() {
     const cantidad = obtenerCantidad();
 
     const inputCantidad = document.getElementById('cantidadEntradas');
@@ -269,7 +269,7 @@ function validarCantidadEntradas() {
     return true; // si es válido
 }
 
-function generarGrilla() {
+export function generarGrilla() {
     const cantidad = obtenerCantidad();
     const tabla = obtenerGrilla();
     const tbody = tabla.querySelector('tbody');
@@ -358,7 +358,7 @@ function generarGrilla() {
 }
 
 
-function validarVisitantes() {
+export function validarVisitantes() {
   const cantidad = obtenerCantidad();
   const tbody = obtenerGrilla().querySelector('tbody');
   const filas = Array.from(tbody.querySelectorAll('tr'));
@@ -378,7 +378,7 @@ function validarVisitantes() {
   return false;
 }
 
-function obtenerGrillaActualizada() {
+export function obtenerGrillaActualizada() {
   const tbody = obtenerGrilla().querySelector('tbody');
   const filas = Array.from(tbody.querySelectorAll('tr'));
   const visitantes = [];
@@ -394,7 +394,7 @@ function obtenerGrillaActualizada() {
 }
 
 
-function calcularTotal() { // solo se encarga de sumar precios y calcular descuentos (no toca el HTML)
+export function calcularTotal() { // solo se encarga de sumar precios y calcular descuentos (no toca el HTML)
     const visitantes = obtenerGrillaActualizada();
     let total = 0;
 
@@ -410,7 +410,7 @@ function calcularTotal() { // solo se encarga de sumar precios y calcular descue
     return total;
 }
 
-function actualizarTotal() {
+export function actualizarTotal() {
     const total = calcularTotal();
     document.getElementById("total").textContent = `Total: $${total}`;
 }
@@ -534,7 +534,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Validar fecha cuando cambie el input de fecha
     fechaInput.addEventListener("change", validarFecha);
 });
-function construirResumenCompra() {
+export function construirResumenCompra() {
   const fecha = document.getElementById("fechaVisita").value;
   const cantidad = obtenerCantidad();
   const visitantes = obtenerGrillaActualizada();
@@ -554,7 +554,7 @@ function construirResumenCompra() {
   ].join('\n');
 }
 
-async function enviarEmailResumenHardcodeado() {
+export async function enviarEmailResumenHardcodeado() {
   const resumen = construirResumenCompra();
   const resp = await fetch('http://localhost:3000/api/send-email', {
     method: 'POST',

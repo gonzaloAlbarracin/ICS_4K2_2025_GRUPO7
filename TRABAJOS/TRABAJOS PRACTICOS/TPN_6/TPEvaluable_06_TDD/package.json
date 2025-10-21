@@ -1,0 +1,24 @@
+{
+  "name": "eco-email",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "token": "node -r dotenv/config get-refresh-token.js",
+    "test": "jest --verbose"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "googleapis": "^144.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.28.3",
+    "@testing-library/jest-dom": "^6.9.1",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0"
+  }
+}
