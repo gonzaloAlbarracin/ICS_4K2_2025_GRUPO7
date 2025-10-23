@@ -357,7 +357,6 @@ export function generarGrilla() {
     actualizarTotal();
 }
 
-
 export function validarVisitantes() {
   const cantidad = obtenerCantidad();
   const tbody = obtenerGrilla().querySelector('tbody');
@@ -414,7 +413,6 @@ export function actualizarTotal() {
     const total = calcularTotal();
     document.getElementById("total").textContent = `Total: $${total}`;
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
     // Configurar límites de fecha
@@ -534,6 +532,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Validar fecha cuando cambie el input de fecha
     fechaInput.addEventListener("change", validarFecha);
 });
+
 export function construirResumenCompra() {
   const fecha = document.getElementById("fechaVisita").value;
   const cantidad = obtenerCantidad();
