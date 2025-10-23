@@ -12,15 +12,21 @@ import {
   validarFechaEnTiempoReal,
   mostrarMensajeExito,
   enviarEmailResumenHardcodeado,
-  mostrarMensajeError
+  mostrarMensajeError,
+  obtenerCantidad,
+  calcularTotal,
+  actualizarTotal,
 } from '../scripts.js';
 
 //import * as Scripts from '../scripts';
 
 global.Toastify = jest.fn().mockReturnValue({ showToast: jest.fn() });
+//global.obtenerGrilla = jest.fn(() => tabla);
+global.obtenerGrilla = jest.fn(() => document.getElementById('grillaVisitantes'));
+global.obtenerGrillaActualizada = jest.fn();
 
 describe('Compra de entradas', () => {
-  let fechaInput, cantidadInput, grilla, tbody, form;
+  let fechaInput, cantidadInput, grilla, tbody, form, formaPago, edadInput, entradaSelect;
 
   beforeEach(() => {
     document.body.innerHTML = `
@@ -38,11 +44,6 @@ describe('Compra de entradas', () => {
       <div id="total"></div>
     `;
 
-    // --- MOCK del envío de email ---
-    //enviarMock = jest                                                  //
-       // .spyOn(Scripts, 'enviarEmailResumenHardcodeado')                     //
-       // .mockImplementation(() => Promise.resolve(true)); // simula éxito.   //
-
     // --- MOCK de mostrar mensajes ---                    
     mostrarMock = jest.spyOn({mostrarMensajeError}, 'mostrarMensajeError').mockImplementation(() => {});
 
@@ -51,6 +52,9 @@ describe('Compra de entradas', () => {
     cantidadInput = document.getElementById('cantidadEntradas');
     grilla = document.getElementById('grillaVisitantes');
     tbody = grilla.querySelector('tbody');
+    formaPago = document.querySelector('input[name="pago"]:checked') //null pq no hay selección
+    edadInput = document.getElementById('edad1');
+    entradaSelect = document.getElementById('tipo1');
     configurarInputFecha();
 
     // Mock de funciones de éxito/error. // Espiamos las funciones críticas y las convertimos en mocks
@@ -127,82 +131,133 @@ describe('Compra de entradas', () => {
   });
 
   describe('CP3 - Ingreso de cantidad de entradas', () => {
-    test('Debe fallar si la cantidad es 12', () => {
+    test('Debe FALLAR si la cantidad es 12', () => {
       cantidadInput.value = '12';
       expect(validarCantidadEntradas()).toBe(false);
     });
 
-    test('Debe pasar si la cantidad es 10', () => {
+    test('Debe PASAR si la cantidad es 10', () => {
         cantidadInput.value = '10'; 
         expect(validarCantidadEntradas()).toBe(true);
     });
 
-    test('Debe fallar si la cantidad es 0 o negativa', () => {
+    test('Debe FALLAR si la cantidad es 0 o negativa', () => {
         cantidadInput.value = '0';
+        expect(validarCantidadEntradas()).toBe(false);
+
+        cantidadInput.value = '-7';
         expect(validarCantidadEntradas()).toBe(false);
     });
   });
 
   describe('CP4 - Selección de fecha de visita', () => {
-    test('Debe fallar si es una fecha pasada', () => {
-        fechaInput.value = '2025-10-10'
-        expect(validarFecha(false)).toBe(false); //el 1er false no mustra el mensaje de error
-        //expect(mostrarMensajeError).not.toHaveBeenCalled();
+    test('Debe FALLAR si es una fecha pasada', () => {
+      fechaInput.value = '2025-10-10'
+      expect(validarFecha(false)).toBe(false); //el 1er false no mustra el mensaje de error
     });
 
-    test('Debe fallar si la fecha es lunes', () => {
-        fechaInput.value = '2025-11-4'
-        expect(validarFecha(false)).toBe(false);
+    test('Debe FALLAR si la fecha es lunes', () => {
+      fechaInput.value = '2025-11-03'; // Este sí es lunes
+      expect(validarFecha(false)).toBe(false);
     });
 
-    test('Debe fallar para fechas especiales', () => {
-        fechaInput.value = '2025-12-25';
-        expect(validarFecha(false)).toBe(false);
+    test('Debe FALLAR para fechas especiales', () => {
+      fechaInput.value = '2025-12-25';
+      expect(validarFecha(false)).toBe(false);
 
-        fechaInput.value = '2026-01-01';
-        expect(validarFecha(false)).toBe(false);
+      fechaInput.value = '2026-01-01';
+      expect(validarFecha(false)).toBe(false);
     });
 
-    test('Debe fallar si la fecha es mayor a 1 mes en el futuro', () => {
-        fechaInput.value = '2026-12-31'
-        expect(validarFecha(false)).toBe(false);
+    test('Debe FALLAR si la fecha es mayor a 1 mes en el futuro', () => {
+      fechaInput.value = '2026-11-29'; //ver 
+      expect(validarFecha(false)).toBe(false);
+    });
+
+    test('Debe FALLAR si no se selecciona fecha de visita',() => {
+      fechaInput.value = '';
+      expect(validarFecha()).toBe(false);
     });
   });
 
-  describe('CP5 - Seleccion de forma de pago', () => {
-    test('Debe fallar si no se selecciona forma de pago', () => {
-      cantidadInput.value = '1';
-      generarGrilla();
-
-      const inputEdad = tbody.querySelector('input');
-      const selectTipo = tbody.querySelector('select');
-
-      inputEdad.value = '30';
-      selectTipo.value = 'vip';
-
-      // Ningún radio seleccionado
-      const form = document.getElementById('formCompra');
-      let valido = true;
-      const formaPago = document.querySelector('input[name="pago"]:checked');
-      if (!formaPago) valido = false;
-
+  describe('CP5 - Seleccion de forma de pago', () => { //no se si esta bien hecha la validacion 
+    test('Debe FALLAR si no se selecciona forma de pago', () => {
+      const valido = !!formaPago; // convierte null → false
       expect(valido).toBe(false);
     });
   });
 
-  describe('CP6 - Ingreso de datos de visitantes', () => {
-    test('Debe fallar si se ingresan menos datos que la cantidad de entradas', () => {
-      cantidadInput.value = '7';
-      generarGrilla();
+  describe('CP6 - Vlidar grilla de visitantes', () => {
+    let cantidadInput1, edadInput1, edadInput2, entradaSelect1, entradaSelect2, edadInput3, entradaSelect3;
 
-      // Solo completar 6 visitantes
-      for (let i = 0; i < 6; i++) {
-        const fila = tbody.querySelectorAll('tr')[i];
-        fila.cells[1].querySelector('input').value = '25';
-        fila.cells[2].querySelector('select').value = 'general';
-      }
+    beforeEach(() => {
+      document.body.innerHTML = `
+        <input id="cantidadEntradas" type="number"/>
+        <table id="grillaVisitantes">
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><input id="edad1" type="number"></td>
+              <td>
+                <select id="tipo1">
+                  <option value=""></option>
+                  <option value="general">General</option>
+                  <option value="vip">VIP</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><input id="edad2" type="number"></td>
+              <td>
+                <select id="tipo2">
+                  <option value=""></option>
+                  <option value="general">General</option>
+                  <option value="vip">VIP</option>
+                </select></td>
+            </tr>
+          </tbody>
+        </table>
+      `;
+      
+      cantidadInput1 = document.getElementById('cantidadEntradas');
+      edadInput1 = document.getElementById('edad1');
+      edadInput2 = document.getElementById('edad2');
+      edadInput3 = document.getElementById('edad3')
+      entradaSelect1 = document.getElementById('tipo1');
+      entradaSelect2 = document.getElementById('tipo2');
+      entradaSelect3 = document.getElementById('tipo3');
 
+    });
+
+    test('Debe FALLAR si no se completan los datos de todos los visitantes', () => {
+      // La grilla genera 2 visitantes (falta edad del visitante 2)
+      cantidadInput1.value = '2';
+      edadInput1.value = '34';
+      edadInput2.value = '';
+      entradaSelect1.value = 'general';
+      entradaSelect2.value = 'general';
+  
       expect(validarVisitantes()).toBe(false);
     });
+
+    test('Debe PASAR si todos los visitantes están completos', () => {
+      // Simulamos que todos los datos están completos
+      cantidadInput1.value = '2';
+      edadInput1.value = '23';
+      edadInput2.value = '30';
+      entradaSelect1.value = 'general';
+      entradaSelect2.value = 'vip';
+
+      expect(validarVisitantes()).toBe(true);
+    });
+
+    test('Debe PASAR si aplica el descuento 50% para menores de 15 o mayores de 60', () => {
+      edadInput1.value = '10';
+      edadInput2.value = '65';
+      entradaSelect1.value = 'general';
+      entradaSelect2.value = 'vip';
+      expect(calcularTotal()).toBe(7500);
+    });
   });
+
 });
