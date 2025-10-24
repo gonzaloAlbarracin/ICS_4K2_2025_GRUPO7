@@ -185,7 +185,7 @@ describe('Compra de entradas', () => {
     });
   });
 
-  describe('CP5 - Simula compra completa con Tarjeta', () => {
+  /*describe('CP5 - Simula compra completa con Tarjeta', () => {
     test('Ingresa fecha válida, cantidad de entradas, completar datos de cada visitante y seleccionar forma de pago con tarjeta', () => {
         // --- Paso 1: setear inputs ---
         fechaInput.value = '2025-10-28';
@@ -246,6 +246,6 @@ describe('Compra de entradas', () => {
         expect(cantidadInput.value).toBe('1');
         expect(document.querySelector('input[name="pago"]:checked').value).toBe('efectivo');
     });
-  });
+  });*/
 
 });

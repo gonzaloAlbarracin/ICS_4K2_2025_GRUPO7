@@ -1,3 +1,5 @@
+import random from 'random';
+
 export function configurarInputFecha() {
     const fechaInput = document.getElementById('fechaVisita');
     const hoy = new Date();
@@ -534,6 +536,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 export function construirResumenCompra() {
+  const randomGenerador = random.int(1, 9000);  
   const fecha = document.getElementById("fechaVisita").value;
   const cantidad = obtenerCantidad();
   const visitantes = obtenerGrillaActualizada();
@@ -545,6 +548,8 @@ export function construirResumenCompra() {
 
   return [
     `EcoHarmony Park - Resumen de compra`,
+    `Hola Marcos Pomenich! Gracias por elegir EcoHarmony Park. Aquí tienes el resumen de tu compra:`,
+    `Código de compra: ${randomGenerador}`,
     `Fecha de visita: ${fecha}`,
     `Entradas: ${cantidad}`,
     `Detalle:`,
