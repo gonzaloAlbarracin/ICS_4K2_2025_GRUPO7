@@ -1,6 +1,8 @@
 /**
  * @jest-environment jsdom
  */
+import { jest } from '@jest/globals';
+
 
 import {
   configurarInputFecha,
@@ -17,6 +19,7 @@ import {
   calcularTotal,
   actualizarTotal,
 } from '../scripts.js';
+global.fetch = jest.fn().mockResolvedValue({ ok: true });
 
 global.Toastify = jest.fn().mockReturnValue({ showToast: jest.fn() });
 global.obtenerGrilla = jest.fn(() => document.getElementById('grillaVisitantes'));
