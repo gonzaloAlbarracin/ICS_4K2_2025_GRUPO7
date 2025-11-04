@@ -36,6 +36,7 @@
       - TIN_<<_NOMBRE_>>
     - TRABAJOS PRÁCTICOS/
       - TPN_<<_N_>>
+      - TPEvaluable_<<_N_>>
 
 ### Items de Configuracion
 
